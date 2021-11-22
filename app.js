@@ -7,9 +7,7 @@ var allToDos = function () {
     success: function (result, textStatus) {
       $('#note-list').empty();
       result.tasks.forEach(function (task) {
-        var todo = document.createElement('p');
-        todo.innerHTML = task.content;
-        $('#note-list').append(todo);
+        $('#note-list').append('<div class="row"><p class="col-xs-8">' + task.content + '</p><button class="delete" data-id="' + task.id + '">Delete</button><input type="checkbox" class="complete" data-id="' + task.id + '/>');
       });
     },
     error: function (request, textStatus, errorMessage) {
@@ -33,7 +31,20 @@ var addTask = function () {
       $('#new-task').val('');
       allToDos();
     },
-    error: function (result, textStatus, errorMessage) {
+    error: function (request, textStatus, errorMessage) {
+      console.log(errorMessage);
+    }
+  });
+}
+
+var deleteTask = function (id) {
+  $.ajax({
+    type: 'DELETE',
+    url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/' + id + '?api_key=204',
+    success: function (result, textStatus) {
+      allToDos();
+    },
+    error: function (request, textStatus, errorMessage) {
       console.log(errorMessage);
     }
   });
@@ -44,6 +55,11 @@ $('document').ready(function () {
   $('#add-task').on('submit', function (event) {
     event.preventDefault();
     addTask();
+  });
+
+  $(document).on('click', '.delete', function () {
+    var id = $(this).data('id');
+    deleteTask(id);
   });
 
   allToDos();
