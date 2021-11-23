@@ -1,3 +1,60 @@
-h2 {
-  color: pink;
+
+body {
+  background-color: #012b3b;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
+
+h1 {
+  color: #f5e5c8;
+  font-size: 110px;
+  font-weight: 300;
+}
+
+#new-task {
+  width: 80%;
+  font-weight: 300;
+  font-style: italic;
+  color: grey;
+}
+
+.add-btn {
+  font-weight: 300;
+  border: 1px solid black;
+  height: 40px;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.add-btn:hover {
+  color: green;
+  border: 1px solid green;
+}
+
+#note-list, #add-task {
+  background-color: #f7f7f7;
+}
+
+#note-list {
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.todo {
+  border-bottom: 2px solid #012b3b;
+}
+
+.todo:hover {
+  background-color: #e6e6e6;
+}
+
+.delete {
+  height: 40px;
+  font-weight: 300;
+}
+
+.delete:hover {
+  color: #be1313;
+}
+

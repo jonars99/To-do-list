@@ -13,16 +13,19 @@
     <script src="app.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <title>To Do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,300&display=swap" rel="stylesheet"/> 
   </head>
 
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-12">
-          <h2 class="text-center mt-5">To do:</h2>
-          <form id="add-task">
-            <input id="new-task" type="text" placeholder="new to do" required/>
-            <button>Add</button>
+        <div class="col-xs-8 col-lg-6 mx-auto">
+          <h1 class="text-center mt-5 mb-3">To do</h1>
+          <form id="add-task" class="form-control">
+            <input id="new-task" class="ms-lg-1 my-1" type="text" placeholder=" new to do" required/>
+            <button class="btn add-btn ms-lg-3 mb-1" type="submit">add</button>
           </form>
           <div id="note-list" class="border mx-auto"></div>
         </div>
