@@ -32,7 +32,7 @@ h1 {
   border: 1px solid green;
 }
 
-#note-list, #add-task {
+#note-list, #filters {
   background-color: #f7f7f7;
 }
 
@@ -56,5 +56,13 @@ h1 {
 
 .delete:hover {
   color: #be1313;
+}
+
+#filters {
+  font-size: 20px;
+}
+
+#filters {
+  color: #bd606f;
 }
 

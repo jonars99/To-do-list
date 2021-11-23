@@ -9,6 +9,7 @@ var allToDos = function () {
       result.tasks.forEach(function (task) {
         $('#note-list').append('<div class="row todo"><input type="checkbox" class="complete col-auto ms-4" data-id="' + task.id + '"' + (task.completed ? 'checked' : '') + '/><p class="col-10 my-2">' + task.content + '</p><button class="btn col-auto delete" data-id="' + task.id + '">X</button>');
       });
+      $('#todoNumber').html(result.tasks.length);
     },
     error: function (request, textStatus, errorMessage) {
       console.log(errorMessage);
